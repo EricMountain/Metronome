@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Metronome</string>
+    <string name="beats_per_minute">Beats per minute</string>
+    <string name="beats_per_minute_default">60</string>
+    <string name="mute">Mute</string>
+    <string name="beatsPerBar">Beats per bar:</string>
+    <string-array name="beatsPerBarList">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>6</item>
+    </string-array>
+
+</resources>

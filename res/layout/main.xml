@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <SeekBar
+        android:id="@+id/beatsPerMinuteSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp" />
+
+    <EditText
+        android:id="@+id/beatsPerMinuteText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/beatsPerMinuteSeekBar"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:inputType="number"
+        android:numeric="integer"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/beats_per_minute_default" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/beatsPerMinuteText"
+        android:layout_centerHorizontal="true"
+        android:text="@string/beats_per_minute"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/minus1Button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/beatsPerMinuteText"
+        android:layout_alignBottom="@+id/beatsPerMinuteText"
+        android:layout_toLeftOf="@+id/beatsPerMinuteText"
+        android:onClick="adjustBeatsPerMinute"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/plus1Button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/beatsPerMinuteText"
+        android:layout_alignBottom="@+id/beatsPerMinuteText"
+        android:layout_toRightOf="@+id/beatsPerMinuteText"
+        android:onClick="adjustBeatsPerMinute"
+        android:text="+" />
+
+    <CheckBox
+        android:id="@+id/BeatsPerBarCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:checked="false"
+        android:text="@string/beatsPerBar" />
+
+    <Spinner
+        android:id="@+id/beatsPerBarSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
+        android:layout_toRightOf="@+id/BeatsPerBarCheckBox"
+        android:entries="@array/beatsPerBarList" />
+
+</RelativeLayout>
